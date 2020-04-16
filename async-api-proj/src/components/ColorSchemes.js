@@ -2,6 +2,20 @@ import React, { useEffect } from 'react';
 import {connect} from 'react-redux';
 import Loader from 'react-loader-spinner';
 import {fetchColor} from '../store/actions/colorAction';
+import styled from 'styled-components';
+
+
+// const Button = styled.button`
+//   background: transparent;
+//   border-radius: 3px;
+//   border: 2px solid yellow;
+//   color: palevioletred;
+//   margin: 0 1em;
+//   padding: 0.25em 1em;
+
+
+
+// `
 
 const ColorSchemes = props => {
     useEffect(()=>{
@@ -12,13 +26,24 @@ const ColorSchemes = props => {
 
 
 
+
+// const Card = styled.div`
+//     background-color: 
+// `
+
+
+
+
+
+
 return (
     <div>
-        <h1>Pallette Here:</h1>
+        <h1>Random Color Pallettes Generated Just For You</h1>
         {props.isFetching && (<Loader timeout={3000}/>)}
         {console.log(props.color)}
            {props.color && props.color.map((item, index) =>{
                return (
+                   
                 <div className= "color-div" key = {index} style={{backgroundColor:`${item}`}}>
                 <h3  style={{color:'white'}}>{item}</h3>
                 </div>
