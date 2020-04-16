@@ -16,6 +16,7 @@ export const colorReducer = (state = initialState, action) =>{
                 isFetching: true
             }
         case 'FETCH_COLOR_SUCCESS':
+            console.log(action);
             return{
                 ...state,
                 isFetching: false,
