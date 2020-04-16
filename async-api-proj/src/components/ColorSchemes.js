@@ -11,11 +11,10 @@ const ColorSchemes = props => {
 
 return (
     <div>
-        <h1>Colors for your pallette</h1>
+        <h1>Pallette Here:</h1>
         {props.isFetching && (<Loader timeout={3000}/>)}
-        <div>
-           {props.colors && <h3>{props.colors}</h3>}
-        </div>
+           {props.color && <h3>"{props.color}"</h3>}
+        <button onClick={props.fetchColor}>Click for new pallette</button>
     </div>
 )
 
@@ -27,8 +26,8 @@ return (
 
 const mapStateToProps = state =>{
     return{
-        color: state.data.color,
-        isFetching: state.data.isFetching
+        color: state.color,
+        isFetching: state.isFetching
     }
 }
 

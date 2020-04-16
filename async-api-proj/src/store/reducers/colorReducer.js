@@ -19,8 +19,8 @@ export const colorReducer = (state = initialState, action) =>{
             return{
                 ...state,
                 isFetching: false,
-                
-                image: action.payload
+                color: action.payload,
+                error: ''
             }    
         case 'FETCH_COLOR_FAILED':
             return{
